@@ -5,25 +5,25 @@
 class Jen < Formula
   desc "Jen is a CLI tool for scaffolding new microservices based on Go templates, onboarding them with your CI/CD and infra, and augmenting them with your DevOps scripts for their entire life-time."
   homepage "https://github.com/silphid/jen"
-  version "0.2.16"
+  version "0.2.17"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/silphid/jen/releases/download/v0.2.16/jen_0.2.16_darwin_x86_64.tar.gz"
-    sha256 "8b3751fc459e77400765e19743e1574200dd55f30cd6719a3d0871e18f743a1e"
+    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_darwin_x86_64.tar.gz"
+    sha256 "7be2ce0ac09b91bb1c4509cfc955aca98b731b861b3fe8766aa8819bdd812adc"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/silphid/jen/releases/download/v0.2.16/jen_0.2.16_darwin_arm64.tar.gz"
-    sha256 "b67f5f0c06576b9bb832e18d33596b25b603af87a6f444a4c59ba463655a8c69"
+    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_darwin_arm64.tar.gz"
+    sha256 "51d7e5fdb5eb9667ef8f8b9e9ffa4ec34bfcf0a5682c4366885d7833b3570070"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/silphid/jen/releases/download/v0.2.16/jen_0.2.16_linux_x86_64.tar.gz"
-    sha256 "403a6dcd5ceefba202ed8acf5065152bee1cfecc9356c54a026901c6b88f5b5c"
+    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_linux_x86_64.tar.gz"
+    sha256 "b07076bbce998f5fb5e7f239122924a03c59a7dc39f8cc5180fb19e8f655ae55"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/silphid/jen/releases/download/v0.2.16/jen_0.2.16_linux_arm64.tar.gz"
-    sha256 "bffe50e076e69806a63c136ad2bcb042b38657decf46156ed3216576a43427bf"
+    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_linux_arm64.tar.gz"
+    sha256 "2da116f5c1e8c320b775cd8acf7d1d3c7a98265e4cabdfe6eeedcda56b5f7a1d"
   end
 
   def install
