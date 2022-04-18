@@ -5,28 +5,44 @@
 class Jen < Formula
   desc "Jen is a CLI tool for scaffolding new microservices based on Go templates, onboarding them with your CI/CD and infra, and augmenting them with your DevOps scripts for their entire life-time."
   homepage "https://github.com/silphid/jen"
-  version "0.2.17"
+  version "0.2.18"
   license "MIT"
-  bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_darwin_x86_64.tar.gz"
-    sha256 "7be2ce0ac09b91bb1c4509cfc955aca98b731b861b3fe8766aa8819bdd812adc"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_darwin_arm64.tar.gz"
-    sha256 "51d7e5fdb5eb9667ef8f8b9e9ffa4ec34bfcf0a5682c4366885d7833b3570070"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_linux_x86_64.tar.gz"
-    sha256 "b07076bbce998f5fb5e7f239122924a03c59a7dc39f8cc5180fb19e8f655ae55"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/silphid/jen/releases/download/v0.2.17/jen_0.2.17_linux_arm64.tar.gz"
-    sha256 "2da116f5c1e8c320b775cd8acf7d1d3c7a98265e4cabdfe6eeedcda56b5f7a1d"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/silphid/jen/releases/download/v0.2.18/jen_0.2.18_darwin_arm64.tar.gz"
+      sha256 "ea69d36b75ae7b2cc846de004a6cc611324aacb2eea59e6ef8379478b37e3cf3"
+
+      def install
+        bin.install "jen"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/silphid/jen/releases/download/v0.2.18/jen_0.2.18_darwin_x86_64.tar.gz"
+      sha256 "63701dc3e53582013003580b163c7f498f6fad6ec1600757fad486c82e76306f"
+
+      def install
+        bin.install "jen"
+      end
+    end
   end
 
-  def install
-    bin.install "jen"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/silphid/jen/releases/download/v0.2.18/jen_0.2.18_linux_arm64.tar.gz"
+      sha256 "62b813df825da1fc53e212fc2fb84f4efd0381199268d00ff9281a631049a182"
+
+      def install
+        bin.install "jen"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/silphid/jen/releases/download/v0.2.18/jen_0.2.18_linux_x86_64.tar.gz"
+      sha256 "90d0992286595b7435ba999bf1dacf3363487cf17c772eac64fdd96c918d623b"
+
+      def install
+        bin.install "jen"
+      end
+    end
   end
 end
