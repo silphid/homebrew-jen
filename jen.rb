@@ -5,21 +5,21 @@
 class Jen < Formula
   desc "Jen is a CLI tool for scaffolding new microservices based on Go templates, onboarding them with your CI/CD and infra, and augmenting them with your DevOps scripts for their entire life-time."
   homepage "https://github.com/silphid/jen"
-  version "0.2.19"
+  version "0.2.20"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/silphid/jen/releases/download/v0.2.19/jen_0.2.19_darwin_arm64.tar.gz"
-      sha256 "f346e915c18797ffbf418a8907cc0110e62651b8969b28153e3396915f3323b3"
+      url "https://github.com/silphid/jen/releases/download/v0.2.20/jen_0.2.20_darwin_arm64.tar.gz"
+      sha256 "5c51e4a4d4fa041b724cd474ae8a8c22bbd64b34315c95554dd9ff2e3547e4d2"
 
       def install
         bin.install "jen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/silphid/jen/releases/download/v0.2.19/jen_0.2.19_darwin_x86_64.tar.gz"
-      sha256 "ca87d96d65d51696d4af8b6063dd6980d3c98bd2ceb7358bb58e6d07b9932880"
+      url "https://github.com/silphid/jen/releases/download/v0.2.20/jen_0.2.20_darwin_x86_64.tar.gz"
+      sha256 "47b1de18c0d5930ec5742f850311d2d949ad6c50db6ec4089ed61db01f1ecb7b"
 
       def install
         bin.install "jen"
@@ -29,16 +29,16 @@ class Jen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/silphid/jen/releases/download/v0.2.19/jen_0.2.19_linux_arm64.tar.gz"
-      sha256 "b23d82fa90bf228514f9793b44dbd7dd9090b0dc77d5d96c20828b8e92ffee58"
+      url "https://github.com/silphid/jen/releases/download/v0.2.20/jen_0.2.20_linux_arm64.tar.gz"
+      sha256 "1f42661f99f79ae0a37d96ffe77324a7dfa15721cbf999e6ab67adc1417cbe1f"
 
       def install
         bin.install "jen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/silphid/jen/releases/download/v0.2.19/jen_0.2.19_linux_x86_64.tar.gz"
-      sha256 "e5720fce54b6e6af5c3889e12db4b2f094ed9bb5d8b401e3df2ca39eac38e6d8"
+      url "https://github.com/silphid/jen/releases/download/v0.2.20/jen_0.2.20_linux_x86_64.tar.gz"
+      sha256 "9d1f762c7533ca553808e50f6cec4d215b4204f7620943c4bf0643ad4e5e6507"
 
       def install
         bin.install "jen"
